@@ -7,9 +7,11 @@
 //
 
 #include <iostream>
+#include "FNStockData.hpp"
 
 int main(int argc, const char * argv[]) {
-	// insert code here...
-	std::cout << "Hello, World!\n";
-    return 0;
+	
+	FNStockData::sharedInstance()->LoadFromFile("/Users/user/data/SH#600004.txt");
+	
+	return 0;
 }

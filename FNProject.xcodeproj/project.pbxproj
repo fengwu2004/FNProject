@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CE5544CA1BD502690028F72D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5544C91BD502690028F72D /* main.cpp */; };
+		CE5544D21BD5032E0028F72D /* FNStockData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5544D01BD5032E0028F72D /* FNStockData.cpp */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,9 @@
 /* Begin PBXFileReference section */
 		CE5544C61BD502690028F72D /* FNProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FNProject; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5544C91BD502690028F72D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		CE5544D01BD5032E0028F72D /* FNStockData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FNStockData.cpp; sourceTree = "<group>"; };
+		CE5544D11BD5032E0028F72D /* FNStockData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FNStockData.hpp; sourceTree = "<group>"; };
+		CE5544D31BD5035C0028F72D /* FNDataDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FNDataDefine.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,9 @@
 			isa = PBXGroup;
 			children = (
 				CE5544C91BD502690028F72D /* main.cpp */,
+				CE5544D01BD5032E0028F72D /* FNStockData.cpp */,
+				CE5544D11BD5032E0028F72D /* FNStockData.hpp */,
+				CE5544D31BD5035C0028F72D /* FNDataDefine.h */,
 			);
 			path = FNProject;
 			sourceTree = "<group>";
@@ -119,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE5544CA1BD502690028F72D /* main.cpp in Sources */,
+				CE5544D21BD5032E0028F72D /* FNStockData.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +243,7 @@
 				CE5544CF1BD502690028F72D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
