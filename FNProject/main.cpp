@@ -3,7 +3,7 @@
 //  FNProject
 //
 //  Created by user on 15/10/19.
-//  Copyright © 2015年 user. All rights reserved.
+//  Copyright © 2015�?user. All rights reserved.
 //
 
 #include <iostream>
@@ -11,7 +11,7 @@
 
 int main(int argc, const char * argv[]) {
 	
-	FNStockData::sharedInstance()->LoadFromFile("/Users/user/data/SH#600004.txt");
+	FNStockData::sharedInstance()->LoadFromFile("C:/data/SH#600004.txt");
 	
 	return 0;
 }
