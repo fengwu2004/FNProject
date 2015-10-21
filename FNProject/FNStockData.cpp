@@ -10,6 +10,8 @@
 #include <string>
 #include <iostream>
 #include <fstream>
+#include "boost/regex.hpp"
+#include "FNCommon.hpp"
 
 int GetStockId(const std::string& fileName) {
 	
@@ -17,6 +19,8 @@ int GetStockId(const std::string& fileName) {
 }
 
 bool RetriveDataFromString(const std::string& str, FNData& data) {
+	
+	std::vector<std::string> tempData = FNCommonUtility::SplitString(str, "\\s");
 	
 	return true;
 }
@@ -47,7 +51,7 @@ std::vector<FNData> GetLimitStockData(std::vector<std::string> strData) {
 
 void FNStockData::LoadFromFile(const std::string& fileName) {
 	
-	std::ifstream infile(fileName);
+	std::ifstream infile(fileName.c_str());
 
 	if (!infile) {
 		
