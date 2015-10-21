@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CE5544CA1BD502690028F72D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5544C91BD502690028F72D /* main.cpp */; };
 		CE5544D21BD5032E0028F72D /* FNStockData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5544D01BD5032E0028F72D /* FNStockData.cpp */; settings = {ASSET_TAGS = (); }; };
+		CEDFA1C61BD7822800CACB15 /* FNCommon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDFA1C41BD7822800CACB15 /* FNCommon.cpp */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +30,8 @@
 		CE5544D01BD5032E0028F72D /* FNStockData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FNStockData.cpp; sourceTree = "<group>"; };
 		CE5544D11BD5032E0028F72D /* FNStockData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FNStockData.hpp; sourceTree = "<group>"; };
 		CE5544D31BD5035C0028F72D /* FNDataDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FNDataDefine.h; sourceTree = "<group>"; };
+		CEDFA1C41BD7822800CACB15 /* FNCommon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FNCommon.cpp; sourceTree = "<group>"; };
+		CEDFA1C51BD7822800CACB15 /* FNCommon.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FNCommon.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +68,8 @@
 				CE5544D01BD5032E0028F72D /* FNStockData.cpp */,
 				CE5544D11BD5032E0028F72D /* FNStockData.hpp */,
 				CE5544D31BD5035C0028F72D /* FNDataDefine.h */,
+				CEDFA1C41BD7822800CACB15 /* FNCommon.cpp */,
+				CEDFA1C51BD7822800CACB15 /* FNCommon.hpp */,
 			);
 			path = FNProject;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEDFA1C61BD7822800CACB15 /* FNCommon.cpp in Sources */,
 				CE5544CA1BD502690028F72D /* main.cpp in Sources */,
 				CE5544D21BD5032E0028F72D /* FNStockData.cpp in Sources */,
 			);
@@ -213,14 +219,22 @@
 		CE5544CE1BD502690028F72D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_CXX_LIBRARY = "libc++";
+				LIBRARY_SEARCH_PATHS = /Users/user/Documents/FNProject/core/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = /Users/user/Documents/FNProject/core/include;
 			};
 			name = Debug;
 		};
 		CE5544CF1BD502690028F72D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_CXX_LIBRARY = "libc++";
+				LIBRARY_SEARCH_PATHS = /Users/user/Documents/FNProject/core/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = /Users/user/Documents/FNProject/core/include;
 			};
 			name = Release;
 		};
