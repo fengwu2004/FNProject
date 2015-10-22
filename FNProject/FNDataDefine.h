@@ -11,6 +11,17 @@
 
 #include <time.h>
 
+enum DataType {
+	
+	ekey_time,
+	ekey_min,
+	ekey_max,
+	ekey_start,
+	ekey_end,
+	ekey_tradevolume,
+	ekey_trademoney,
+};
+
 struct FNTime {
 	
 	int m_nYear;
