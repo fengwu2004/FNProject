@@ -8,6 +8,8 @@
 
 #include "FNCommon.hpp"
 #include "boost/regex.hpp"
+#include <dirent.h>
+#include <sys/stat.h>
 
 namespace FNCommonUtility {
 	
@@ -28,4 +30,40 @@ namespace FNCommonUtility {
 		
 		return tempData;
 	}
+	
+	bool ReadDir(const std::string& dirName, std::vector<std::string>& vecFileNames) {
+		
+		DIR *dir;
+		
+		struct dirent *drt;
+		
+		if ((dir = opendir(dirName.c_str())) == NULL) {
+			
+			return false;
+		}
+		
+		while ((drt = readdir(dir)) != NULL) {
+			
+			if ((strcmp(drt->d_name, ".") != 0) && (strcmp(drt->d_name, "..") != 0)) {
+				
+				char szTempDir[MAX_PATH] = { 0 };
+				
+				sprintf(szTempDir, "%s/%s", dirName.c_str(), drt->d_name);
+				
+				struct stat buf;
+				
+				stat(szTempDir, &buf);
+				
+				if (!S_ISDIR(buf.st_mode)) {
+					
+					vecFileNames.push_back(szTempDir);
+				}
+			}
+		}
+		
+		closedir(dir);
+		
+		return true;
+	}
+	
 }
