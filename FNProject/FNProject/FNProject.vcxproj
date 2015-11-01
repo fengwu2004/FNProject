@@ -63,7 +63,8 @@
       <AdditionalLibraryDirectories>$(ProjectDir)/../../core/lib/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <BuildLog>
-      <Path>$(SolutionDir)/../../FN_Debug/</Path>
+      <Path>
+      </Path>
     </BuildLog>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

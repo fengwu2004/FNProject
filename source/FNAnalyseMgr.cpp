@@ -35,7 +35,18 @@ void FNAnalyseMgr::Excute() {
 
 bool FNAnalyseMgr::AnalyseData(const std::vector<FNData>& dataArray) {
 	
-	return true;
+	if (dataArray.size() < 2)
+	{
+		return false;
+	}
+
+	size_t nLast = dataArray.size() - 1;
+
+	const FNData& lastData = dataArray[nLast];
+
+	const FNData& nextData = dataArray[nLast - 1];
+
+	return lastData.m_fEnd >= nextData.m_fEnd;
 }
 
 void FNAnalyseMgr::RunOnCondition() {

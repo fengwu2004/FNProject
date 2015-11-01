@@ -19,7 +19,7 @@ int GetStockId(const std::string& fileName) {
 	
 	std::string value = tempData[1];
 	
-	tempData = FNCommonUtility::SplitString(value, ".");
+	tempData = FNCommonUtility::SplitString(value, ".txt");
 	
 	return atoi(tempData[0].c_str());
 }
