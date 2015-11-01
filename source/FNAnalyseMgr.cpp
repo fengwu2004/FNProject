@@ -1,9 +1,9 @@
-//
+﻿//
 //  FNAnalyseMgr.cpp
 //  FNProject
 //
 //  Created by user on 15/10/22.
-//  Copyright © 2015�?user. All rights reserved.
+//  Copyright 漏 2015骞?user. All rights reserved.
 //
 
 #include "FNAnalyseMgr.hpp"
@@ -34,8 +34,6 @@ void FNAnalyseMgr::Excute() {
 }
 
 bool FNAnalyseMgr::AnalyseData(const std::vector<FNData>& dataArray) {
-	
-	
 	
 	return true;
 }

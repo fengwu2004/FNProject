@@ -1,9 +1,9 @@
-//
+﻿//
 //  main.cpp
 //  FNProject
 //
 //  Created by user on 15/10/19.
-//  Copyright © 2015�?user. All rights reserved.
+//  Copyright 漏 2015骞?user. All rights reserved.
 //
 
 #include <iostream>
