@@ -1,0 +1,14 @@
+﻿Build started 11/1/2015 4:56:32 PM.
+     1>Project "C:\FNProject\FNProject\FNProject\FNProject.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\FNProject\FNProject\Debug\FNProject.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\FNProject\FNProject\FNProject\/../../core/lib/ kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\FNProject\FNProject\Debug\FNProject.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\FNProject\FNProject\Debug\FNProject.lib" /MACHINE:X86 Debug\FNAnalyseMgr.obj
+         Debug\FNAnalyser.obj
+         Debug\FNCommon.obj
+         Debug\FNStockData.obj
+         Debug\main.obj
+         FNProject.vcxproj -> C:\FNProject\FNProject\Debug\FNProject.exe
+     1>Done Building Project "C:\FNProject\FNProject\FNProject\FNProject.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.38
