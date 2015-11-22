@@ -1,13 +1,12 @@
 #pragma once
 
-#include "easysqlite3/SqlCommon.h"
+struct FNData;
+
+#include <map>
+#include <vector>
 
 class FNDBSystem
 {
 public:
-	static FNDBSystem * sharedInstance();
-
-public:
-	void init();
+	static void SaveToArchive(const std::map<int, std::vector<FNData> >& allStocks);
 };
-

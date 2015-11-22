@@ -11,12 +11,18 @@
 #include <vector>
 #include "FNCommon.hpp"
 #include <fstream>
+#include "FNDBSystem.h"
 
 FNAnalyseMgr* FNAnalyseMgr::sharedInstance() {
 
 	static FNAnalyseMgr _FNAnalyseMgr;
 	
 	return &_FNAnalyseMgr;
+}
+
+void FNAnalyseMgr::OnSaveToDB()
+{
+	FNDBSystem::SaveToArchive(m_dicStockData);
 }
 
 void FNAnalyseMgr::Excute() {
@@ -29,8 +35,10 @@ void FNAnalyseMgr::Excute() {
 		
 		FNStockData::sharedInstance()->LoadFromFile(fileNames[i], m_dicStockData);
 	}
+
+	OnSaveToDB();
 	
-	RunOnCondition();
+	/*RunOnCondition();*/
 }
 
 bool FNAnalyseMgr::AnalyseData(const std::vector<FNData>& dataArray) {
@@ -46,7 +54,7 @@ bool FNAnalyseMgr::AnalyseData(const std::vector<FNData>& dataArray) {
 
 	const FNData& nextData = dataArray[nLast - 1];
 
-	return lastData.m_fEnd >= nextData.m_fEnd;
+	return lastData.m_fEndPrice >= nextData.m_fEndPrice;
 }
 
 void FNAnalyseMgr::RunOnCondition() {

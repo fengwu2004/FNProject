@@ -25,6 +25,8 @@ public:
 	
 private:
 	void RunOnCondition();
+
+	void OnSaveToDB();
 	
 	bool AnalyseData(const std::vector<FNData>& dataArray);
 	

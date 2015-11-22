@@ -12,6 +12,7 @@
 #include <fstream>
 #include "boost/regex.hpp"
 #include "FNCommon.hpp"
+#include <time.h>
 
 int GetStockId(const std::string& fileName) {
 	
@@ -24,34 +25,40 @@ int GetStockId(const std::string& fileName) {
 	return atoi(tempData[0].c_str());
 }
 
-void RetriveTime(const std::string& str, FNTime& time) {
+time_t RetriveTime(const std::string& str) {
 	
+	tm thistime;
+
+	memset(&thistime, 0x00, sizeof(thistime));
+
 	std::vector<std::string> tempData = FNCommonUtility::SplitString(str, "/");
 	
-	time.m_nYear = atoi(tempData[0].c_str());
+	thistime.tm_year = atoi(tempData[0].c_str());
 	
-	time.m_nMonth = atoi(tempData[1].c_str());
+	thistime.tm_mon = atoi(tempData[1].c_str());
 	
-	time.m_nDay = atoi(tempData[2].c_str());
+	thistime.tm_mday = atoi(tempData[2].c_str());
+
+	return mktime(&thistime);	
 }
 
 bool RetriveDataFromString(const std::string& str, FNData& data) {
 	
 	std::vector<std::string> tempData = FNCommonUtility::SplitString(str, "\\s");
 	
-	RetriveTime(tempData[ekey_time], data.m_time);
+	data.m_time = RetriveTime(tempData[ekey_time]);
 	
-	data.m_fMin = atof(tempData[ekey_min].c_str());
+	data.m_fLowPrice = atof(tempData[ekey_min].c_str());
 	
-	data.m_fMax = atof(tempData[ekey_max].c_str());
+	data.m_fHighPrice = atof(tempData[ekey_max].c_str());
 	
-	data.m_fStart = atof(tempData[ekey_start].c_str());
+	data.m_fOpenPrice = atof(tempData[ekey_start].c_str());
 	
-	data.m_fEnd = atof(tempData[ekey_end].c_str());
+	data.m_fEndPrice = atof(tempData[ekey_end].c_str());
 	
 	data.m_nTradingVolume = atoi(tempData[ekey_tradevolume].c_str());
 	
-	data.m_nTradingMoney = atoi(tempData[ekey_trademoney].c_str());
+	data.m_nTradingAmount = atoi(tempData[ekey_trademoney].c_str());
 	
 	return true;
 }

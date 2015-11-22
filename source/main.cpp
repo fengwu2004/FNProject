@@ -13,9 +13,7 @@
 
 int main(int argc, const char * argv[]) {
 
-	FNDBSystem::sharedInstance()->init();
-
-	/*FNAnalyseMgr::sharedInstance()->Excute();*/
+	FNAnalyseMgr::sharedInstance()->Excute();
 	
 	return 0;
 }

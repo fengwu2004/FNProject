@@ -14,12 +14,15 @@
 #include <vector>
 
 #define MAX_PATH 256
+#define INT2STR(k) FNCommonUtility::int2str(k) 
 
 namespace FNCommonUtility {
 	
 	std::vector<std::string> SplitString(const std::string& str, const std::string& placeHoldstr);
 	
 	bool ReadDir(const std::string& dirName, std::vector<std::string>& vecFileNames);
+
+	const std::string& int2str(int value);
 }
 
 #endif /* FNCommon_hpp */

@@ -1,4 +1,6 @@
 #include "FNDBSystem.h"
+#include "FNCommon.hpp"
+#include "FNDataDefine.h"
 #include "easysqlite3/SqlCommon.h"
 #include "easysqlite3/SqlField.h"
 #include "easysqlite3/SqlDatabase.h"
@@ -6,69 +8,50 @@
 
 using namespace sql;
 
-FNDBSystem *FNDBSystem::sharedInstance() {
-
-	static FNDBSystem instance;
-
-	return &instance;
-}
-
-void FNDBSystem::init() {
-
-	Field definition_tbPerson[] =
-	{
-		Field(FIELD_KEY),
-		Field("fname", type_text, flag_not_null),
-		Field("lname", type_text, flag_not_null),
-		Field("birthdate", type_time),
-		Field(DEFINITION_END),
-	};
-
-	//define database object
+void FNDBSystem::SaveToArchive(const std::map<int, std::vector<FNData> >& allStocks) 
+{
 	sql::Database db;
 
-	db.open("test.db");
+	db.open("c:/data/stocks.db");
 
-	//define table object
-	Table tbPerson(db.getHandle(), "person", definition_tbPerson);
-
-	//remove table from database if exists
-	if (tbPerson.exists())
-		tbPerson.remove();
-
-	//create new table
-	tbPerson.create();
-
-	//define new record
-	Record record(tbPerson.fields());
-
-	//set record data
-	record.setString("fname", "Jan");
-	record.setString("lname", "Kowalski");
-	record.setTime("birthdate", time::now());
-
-	//add 10 records
-	for (int index = 0; index < 10; index++)
-		tbPerson.addRecord(&record);
-
-	//select record to update
-	if (Record* record = tbPerson.getRecordByKeyId(7))
+	for (std::map<int, std::vector<FNData> >::const_iterator iter = allStocks.begin(); iter != allStocks.end(); ++iter)
 	{
-		record->setString("fname", "Frank");
-		record->setString("lname", "Sinatra");
-		record->setNull("birthdate");
+		int nStockId = iter->first;
 
-		tbPerson.updateRecord(record);
+		const std::vector<FNData>& vctStock = iter->second;
+
+		std::string tableName = INT2STR(nStockId);
+
+		Table tbStock(db.getHandle(), "tableName", stockField);
+
+		if (tbStock.exists())
+		{
+			tbStock.remove();
+		}
+
+		tbStock.create();
+
+		for (std::vector<FNData>::const_iterator iter = vctStock.begin(); iter != vctStock.end(); ++iter)
+		{
+			Record record(tbStock.fields());
+
+			record.setTime(field_tradingDay, iter->m_time);
+
+			record.setDouble(field_lowPrice, iter->m_fLowPrice);
+
+			record.setDouble(field_highPrice, iter->m_fHighPrice);
+
+			record.setDouble(field_openPrice, iter->m_fOpenPrice);
+
+			record.setDouble(field_endPrice, iter->m_fEndPrice);
+
+			record.setInteger(field_tradingVolum, iter->m_nTradingVolume);
+
+			record.setInteger(field_tradingAmount, iter->m_nTradingAmount);
+
+			tbStock.addRecord(&record);
+		}
 	}
-
-	//load all records
-	tbPerson.open();
-
-	//list loaded records
-	for (int index = 0; index < tbPerson.recordCount(); index++)
-		if (Record* record = tbPerson.getRecord(index))
-			sql::log(record->toString());
-
-	sql::log("");
-	sql::log("ALL OK");
+	
+	db.close();
 }

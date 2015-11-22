@@ -8,6 +8,7 @@
 
 #include "FNCommon.hpp"
 #include "boost/regex.hpp"
+#include <sstream>
 
 #ifdef WIN32
 #include "dirent.h"
@@ -70,6 +71,15 @@ namespace FNCommonUtility {
 		closedir(dir);
 		
 		return true;
+	}
+
+	const std::string& int2str(int value) {
+
+		std::stringstream stream;
+
+		stream << value;
+
+		return stream.str();
 	}
 	
 }
