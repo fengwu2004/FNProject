@@ -15,6 +15,7 @@
 
 #define MAX_PATH 256
 #define INT2STR(k) FNCommonUtility::int2str(k) 
+#define TIME2DATA(k) FNCommonUtility::time2date(k)
 
 namespace FNCommonUtility {
 	
@@ -22,7 +23,9 @@ namespace FNCommonUtility {
 	
 	bool ReadDir(const std::string& dirName, std::vector<std::string>& vecFileNames);
 
-	const std::string& int2str(int value);
+	std::string int2str(int value);
+
+	std::string time2date(time_t t);
 }
 
 #endif /* FNCommon_hpp */

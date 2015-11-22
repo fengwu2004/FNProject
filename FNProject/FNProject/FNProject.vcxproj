@@ -58,7 +58,7 @@
       <AdditionalIncludeDirectories>$(ProjectDir)/../../core/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>NotSet</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(ProjectDir)/../../core/lib/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>easySqlite3.lib;%(AdditionalDependencies)</AdditionalDependencies>

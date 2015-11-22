@@ -27,19 +27,19 @@ int GetStockId(const std::string& fileName) {
 
 time_t RetriveTime(const std::string& str) {
 	
-	tm thistime;
+	struct tm thistime;
 
 	memset(&thistime, 0x00, sizeof(thistime));
 
 	std::vector<std::string> tempData = FNCommonUtility::SplitString(str, "/");
 	
-	thistime.tm_year = atoi(tempData[0].c_str());
+	thistime.tm_year = atoi(tempData[0].c_str()) - 1900;
 	
-	thistime.tm_mon = atoi(tempData[1].c_str());
+	thistime.tm_mon = atoi(tempData[1].c_str()) - 1;
 	
 	thistime.tm_mday = atoi(tempData[2].c_str());
 
-	return mktime(&thistime);	
+	return mktime(&thistime);
 }
 
 bool RetriveDataFromString(const std::string& str, FNData& data) {
@@ -113,10 +113,10 @@ void FNStockData::LoadFromFile(const std::string& fileName, std::map<int, std::v
 			continue;
 		}
 		
-		std::cout << line << std::endl;
-		
 		vctData.push_back(line);
 	}
+
+	std::cout << fileName << std::endl;
 	
 	vctData.pop_back();
 	

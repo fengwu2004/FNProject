@@ -7,8 +7,9 @@
 //
 
 #include "FNCommon.hpp"
-#include "boost/regex.hpp"
 #include <sstream>
+#include "boost/regex.hpp"
+#include "easysqlite3/SqlCommon.h"
 
 #ifdef WIN32
 #include "dirent.h"
@@ -73,13 +74,19 @@ namespace FNCommonUtility {
 		return true;
 	}
 
-	const std::string& int2str(int value) {
+	std::string int2str(int value) {
 
-		std::stringstream stream;
+		char szText[64] = { 0 };
 
-		stream << value;
-
-		return stream.str();
+		sprintf(szText, "%06d", value);
+		
+		return szText;
 	}
-	
+
+	std::string time2date(time_t t) {
+
+		sql::time mytime(t);
+
+		return mytime.asDateString();
+	}
 }

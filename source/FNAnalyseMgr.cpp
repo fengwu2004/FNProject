@@ -12,6 +12,7 @@
 #include "FNCommon.hpp"
 #include <fstream>
 #include "FNDBSystem.h"
+#include <iostream>
 
 FNAnalyseMgr* FNAnalyseMgr::sharedInstance() {
 
@@ -23,6 +24,8 @@ FNAnalyseMgr* FNAnalyseMgr::sharedInstance() {
 void FNAnalyseMgr::OnSaveToDB()
 {
 	FNDBSystem::SaveToArchive(m_dicStockData);
+
+	std::cout << "数据库更新成功" << std::endl;
 }
 
 void FNAnalyseMgr::Excute() {
