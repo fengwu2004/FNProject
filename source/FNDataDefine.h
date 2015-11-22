@@ -15,6 +15,9 @@
 
 using namespace sql;
 
+static const std::string DBFilePath = "d:/stock/stocks.db";
+static const std::string analysePath = "d:/stock/stock.html";
+
 enum DataType {
 	
 	ekey_time,

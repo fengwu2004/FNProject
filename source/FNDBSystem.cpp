@@ -75,11 +75,9 @@ void FNDBSystem::SaveToArchive(const std::map<int, std::vector<FNData> >& allSto
 {
 	try
 	{
-		remove("c:/output/stocks.db");
-
 		sql::Database db;
 
-		db.open("c:/output/stocks.db");
+		db.open(DBFilePath);
 
 		std::vector<int> stocksIndex;
 
@@ -133,7 +131,7 @@ void FNDBSystem::LoadFromArchive(std::map<int, std::vector<FNData> >& allStocks)
 {
 	sql::Database db;
 
-	db.open("c:/output/stocks.db");
+	db.open(DBFilePath);
 
 	Table tbStockIds(db.getHandle(), "stockIds", FieldOfStockId);
 

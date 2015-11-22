@@ -22,13 +22,13 @@ public:
 	void Excute();
 
 	void LoadFromDB();
+
+	void SaveToDB();
 	
 	void OutputResult();
 	
 private:
 	void RunOnCondition();
-
-	void OnSaveToDB();
 	
 	bool AnalyseData(const std::vector<FNData>& dataArray);
 	

@@ -100,7 +100,7 @@ void FNStockData::LoadFromFile(const std::string& fileName, std::map<int, std::v
 	
 	std::string line;
 	
-	std::vector<std::string> vctData;
+	std::vector<std::string> tempData;
 	
 	int i = 0;
 	
@@ -113,12 +113,28 @@ void FNStockData::LoadFromFile(const std::string& fileName, std::map<int, std::v
 			continue;
 		}
 		
-		vctData.push_back(line);
+		tempData.push_back(line);
 	}
 
 	std::cout << fileName << std::endl;
 	
-	vctData.pop_back();
+	tempData.pop_back();
+
+	std::vector<std::string> vctData;
+
+	int nCount = 0;
+
+	for (std::vector<std::string>::reverse_iterator iter = tempData.rbegin(); iter != tempData.rend(); ++iter)
+	{
+		if (nCount > 255)
+		{
+			break;
+
+			++nCount;
+		}
+
+		vctData.push_back(*iter);
+	}
 	
 	data[nId] = GetLimitStockData(vctData);
 }

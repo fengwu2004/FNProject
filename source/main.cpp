@@ -13,7 +13,7 @@
 
 int main(int argc, const char * argv[]) {
 
-	FNAnalyseMgr::sharedInstance()->LoadFromDB();
+	FNAnalyseMgr::sharedInstance()->Excute();
 	
 	return 0;
 }
