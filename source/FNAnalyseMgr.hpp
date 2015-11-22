@@ -20,6 +20,8 @@ public:
 	static FNAnalyseMgr* sharedInstance();
 	
 	void Excute();
+
+	void LoadFromDB();
 	
 	void OutputResult();
 	

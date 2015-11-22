@@ -33,7 +33,7 @@ struct FNTime {
 	int m_nDay;
 };
 
-static const std::string  field_stockId			= "stockId";
+
 static const std::string  field_lowPrice		= "lowPrice";
 static const std::string  field_highPrice		= "highPrice";
 static const std::string  field_openPrice		= "openPrice";
@@ -42,16 +42,25 @@ static const std::string  field_tradingVolum	= "tradingVolum";
 static const std::string  field_tradingAmount	= "tradingAmount";
 static const std::string  field_tradingDay		= "tradingDay";
 
-static sql::Field stockField[] =
+static sql::Field FieldOfStockInfo[] =
 {
 	sql::Field(FIELD_KEY),
 	sql::Field(field_lowPrice, type_float),
 	sql::Field(field_highPrice, type_float),
 	sql::Field(field_openPrice, type_float),
 	sql::Field(field_endPrice, type_float),
-	sql::Field(field_tradingVolum, type_float),
-	sql::Field(field_tradingAmount, type_float),
+	sql::Field(field_tradingVolum, type_int),
+	sql::Field(field_tradingAmount, type_int),
 	sql::Field(field_tradingDay, type_time),
+	sql::Field(DEFINITION_END),
+};
+
+static const std::string  field_stockId			= "stockId";
+
+static sql::Field FieldOfStockId[] = 
+{
+	sql::Field(FIELD_KEY),
+	sql::Field(field_stockId, type_int),
 	sql::Field(DEFINITION_END),
 };
 

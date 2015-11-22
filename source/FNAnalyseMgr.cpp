@@ -28,6 +28,13 @@ void FNAnalyseMgr::OnSaveToDB()
 	std::cout << "数据库更新成功" << std::endl;
 }
 
+void FNAnalyseMgr::LoadFromDB() {
+
+	FNDBSystem::LoadFromArchive(m_dicStockData);
+
+	std::cout << "数据库加载成功" << std::endl;
+}
+
 void FNAnalyseMgr::Excute() {
 	
 	std::vector<std::string> fileNames;
