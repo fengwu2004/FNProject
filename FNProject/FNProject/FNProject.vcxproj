@@ -61,6 +61,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(ProjectDir)/../../core/lib/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>easySqlite3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <BuildLog>
       <Path>
@@ -89,6 +90,7 @@
     <ClCompile Include="..\..\source\FNAnalyseMgr.cpp" />
     <ClCompile Include="..\..\source\FNAnalyser.cpp" />
     <ClCompile Include="..\..\source\FNCommon.cpp" />
+    <ClCompile Include="..\..\source\FNDBSystem.cpp" />
     <ClCompile Include="..\..\source\FNStockData.cpp" />
     <ClCompile Include="..\..\source\main.cpp" />
   </ItemGroup>
@@ -97,6 +99,7 @@
     <ClInclude Include="..\..\source\FNAnalyser.hpp" />
     <ClInclude Include="..\..\source\FNCommon.hpp" />
     <ClInclude Include="..\..\source\FNDataDefine.h" />
+    <ClInclude Include="..\..\source\FNDBSystem.h" />
     <ClInclude Include="..\..\source\FNStockData.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

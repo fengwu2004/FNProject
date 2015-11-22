@@ -9,10 +9,13 @@
 #include <iostream>
 #include "FNStockData.hpp"
 #include "FNAnalyseMgr.hpp"
+#include "FNDBSystem.h"
 
 int main(int argc, const char * argv[]) {
 
-	FNAnalyseMgr::sharedInstance()->Excute();
+	FNDBSystem::sharedInstance()->init();
+
+	/*FNAnalyseMgr::sharedInstance()->Excute();*/
 	
 	return 0;
 }
