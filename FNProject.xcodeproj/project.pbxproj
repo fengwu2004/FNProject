@@ -10,6 +10,8 @@
 		CE5544CA1BD502690028F72D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5544C91BD502690028F72D /* main.cpp */; };
 		CE5544D21BD5032E0028F72D /* FNStockData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5544D01BD5032E0028F72D /* FNStockData.cpp */; settings = {ASSET_TAGS = (); }; };
 		CEDFA1C61BD7822800CACB15 /* FNCommon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDFA1C41BD7822800CACB15 /* FNCommon.cpp */; settings = {ASSET_TAGS = (); }; };
+		CEEFDF261BD8D31A00706E2D /* FNAnalyseMgr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEEFDF241BD8D31A00706E2D /* FNAnalyseMgr.cpp */; settings = {ASSET_TAGS = (); }; };
+		CEEFDF291BD8D95400706E2D /* FNAnalyser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEEFDF271BD8D95400706E2D /* FNAnalyser.cpp */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +34,10 @@
 		CE5544D31BD5035C0028F72D /* FNDataDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FNDataDefine.h; sourceTree = "<group>"; };
 		CEDFA1C41BD7822800CACB15 /* FNCommon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FNCommon.cpp; sourceTree = "<group>"; };
 		CEDFA1C51BD7822800CACB15 /* FNCommon.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FNCommon.hpp; sourceTree = "<group>"; };
+		CEEFDF241BD8D31A00706E2D /* FNAnalyseMgr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FNAnalyseMgr.cpp; sourceTree = "<group>"; };
+		CEEFDF251BD8D31A00706E2D /* FNAnalyseMgr.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FNAnalyseMgr.hpp; sourceTree = "<group>"; };
+		CEEFDF271BD8D95400706E2D /* FNAnalyser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FNAnalyser.cpp; sourceTree = "<group>"; };
+		CEEFDF281BD8D95400706E2D /* FNAnalyser.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FNAnalyser.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,10 @@
 				CE5544D31BD5035C0028F72D /* FNDataDefine.h */,
 				CEDFA1C41BD7822800CACB15 /* FNCommon.cpp */,
 				CEDFA1C51BD7822800CACB15 /* FNCommon.hpp */,
+				CEEFDF241BD8D31A00706E2D /* FNAnalyseMgr.cpp */,
+				CEEFDF251BD8D31A00706E2D /* FNAnalyseMgr.hpp */,
+				CEEFDF271BD8D95400706E2D /* FNAnalyser.cpp */,
+				CEEFDF281BD8D95400706E2D /* FNAnalyser.hpp */,
 			);
 			path = FNProject;
 			sourceTree = "<group>";
@@ -130,7 +140,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEEFDF261BD8D31A00706E2D /* FNAnalyseMgr.cpp in Sources */,
 				CEDFA1C61BD7822800CACB15 /* FNCommon.cpp in Sources */,
+				CEEFDF291BD8D95400706E2D /* FNAnalyser.cpp in Sources */,
 				CE5544CA1BD502690028F72D /* main.cpp in Sources */,
 				CE5544D21BD5032E0028F72D /* FNStockData.cpp in Sources */,
 			);
