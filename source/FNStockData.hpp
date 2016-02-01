@@ -19,7 +19,7 @@ class FNStockData
 public:
 	static FNStockData* sharedInstance();
 	
-	void FNStockData::LoadFromFile(const std::string& fileName, std::map<int, std::vector<FNData> >& data);
+	void LoadFromFile(const std::string& fileName, std::map<int, std::vector<FNData> >& data);
 };
 
 #endif /* FNData_hpp */

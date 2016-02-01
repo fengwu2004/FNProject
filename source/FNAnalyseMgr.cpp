@@ -14,6 +14,9 @@
 #include "FNDBSystem.h"
 #include <iostream>
 #include <stdio.h>
+#include "FNAnalyser.hpp"
+#include "FNAnalyserFactory.hpp"
+#include <assert.h>
 
 FNAnalyseMgr* FNAnalyseMgr::sharedInstance() {
 
@@ -75,53 +78,17 @@ void FNAnalyseMgr::Excute() {
 	RunOnCondition();
 }
 
-bool FNAnalyseMgr::AnalyseData(const std::vector<FNData>& dataArray) {
-	
-	//刚刚开的新股
-	if (dataArray.size() < 2)
-	{
-		return true;
-	}
-
-	//到过高点，高点至少为50左右
-	float fHighestPrice = 0;
-
-	for (std::vector<FNData>::const_iterator iter = dataArray.begin(); iter != dataArray.end(); ++iter)
-	{
-		if (fHighestPrice < iter->m_fHighPrice)
-		{
-			fHighestPrice = iter->m_fHighPrice;
-		}
-	}
-
-	if (fHighestPrice > 160)
-	{
-		return false;
-	}
-
-	if (fHighestPrice < 50)
-	{
-		return false;
-	}
-
-	//现在跌下来或者分拆，股价 < 30
-	float fCurPrice = dataArray[0].m_fHighPrice;
-
-	if (fCurPrice > 0.45 * fHighestPrice)
-	{
-		return false;
-	}
-
-	return true;
-}
-
 void FNAnalyseMgr::RunOnCondition() {
 	
 	m_vctResult.clear();
 	
+	FNAnalyser* pAnalyser = FNAnalyserFactory::sharedInstance()->getAnalyser(0);
+	
+	assert(pAnalyser);
+	
 	for (std::map<int, std::vector<FNData> >::iterator iter = m_dicStockData.begin(); iter != m_dicStockData.end(); ++iter) {
-		
-		if (AnalyseData(iter->second)) {
+
+		if (pAnalyser->AnalyserData(iter->second)) {
 			
 			m_vctResult.push_back(iter->first);
 		}

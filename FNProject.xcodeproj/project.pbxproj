@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE5544CA1BD502690028F72D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5544C91BD502690028F72D /* main.cpp */; };
-		CE5544D21BD5032E0028F72D /* FNStockData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5544D01BD5032E0028F72D /* FNStockData.cpp */; settings = {ASSET_TAGS = (); }; };
-		CEDFA1C61BD7822800CACB15 /* FNCommon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDFA1C41BD7822800CACB15 /* FNCommon.cpp */; settings = {ASSET_TAGS = (); }; };
-		CEEFDF261BD8D31A00706E2D /* FNAnalyseMgr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEEFDF241BD8D31A00706E2D /* FNAnalyseMgr.cpp */; settings = {ASSET_TAGS = (); }; };
-		CEEFDF291BD8D95400706E2D /* FNAnalyser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEEFDF271BD8D95400706E2D /* FNAnalyser.cpp */; settings = {ASSET_TAGS = (); }; };
+		CEACA4B71C03488C007F4C18 /* FNAnalyseMgr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEACA4AB1C03488C007F4C18 /* FNAnalyseMgr.cpp */; };
+		CEACA4B91C03488C007F4C18 /* FNCommon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEACA4AF1C03488C007F4C18 /* FNCommon.cpp */; };
+		CEACA4BA1C03488C007F4C18 /* FNDBSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEACA4B21C03488C007F4C18 /* FNDBSystem.cpp */; };
+		CEACA4BB1C03488C007F4C18 /* FNStockData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEACA4B41C03488C007F4C18 /* FNStockData.cpp */; };
+		CEACA4BC1C03488C007F4C18 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEACA4B61C03488C007F4C18 /* main.cpp */; };
+		CEACA4BF1C034D45007F4C18 /* FNAnalyserOne.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEACA4BD1C034D45007F4C18 /* FNAnalyserOne.cpp */; };
+		CEACA4C21C034DCF007F4C18 /* FNAnalyserFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEACA4C01C034DCF007F4C18 /* FNAnalyserFactory.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,16 +30,21 @@
 
 /* Begin PBXFileReference section */
 		CE5544C61BD502690028F72D /* FNProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FNProject; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE5544C91BD502690028F72D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		CE5544D01BD5032E0028F72D /* FNStockData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FNStockData.cpp; sourceTree = "<group>"; };
-		CE5544D11BD5032E0028F72D /* FNStockData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FNStockData.hpp; sourceTree = "<group>"; };
-		CE5544D31BD5035C0028F72D /* FNDataDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FNDataDefine.h; sourceTree = "<group>"; };
-		CEDFA1C41BD7822800CACB15 /* FNCommon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FNCommon.cpp; sourceTree = "<group>"; };
-		CEDFA1C51BD7822800CACB15 /* FNCommon.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FNCommon.hpp; sourceTree = "<group>"; };
-		CEEFDF241BD8D31A00706E2D /* FNAnalyseMgr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FNAnalyseMgr.cpp; sourceTree = "<group>"; };
-		CEEFDF251BD8D31A00706E2D /* FNAnalyseMgr.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FNAnalyseMgr.hpp; sourceTree = "<group>"; };
-		CEEFDF271BD8D95400706E2D /* FNAnalyser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FNAnalyser.cpp; sourceTree = "<group>"; };
-		CEEFDF281BD8D95400706E2D /* FNAnalyser.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FNAnalyser.hpp; sourceTree = "<group>"; };
+		CEACA4AB1C03488C007F4C18 /* FNAnalyseMgr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FNAnalyseMgr.cpp; path = source/FNAnalyseMgr.cpp; sourceTree = SOURCE_ROOT; };
+		CEACA4AC1C03488C007F4C18 /* FNAnalyseMgr.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FNAnalyseMgr.hpp; path = source/FNAnalyseMgr.hpp; sourceTree = SOURCE_ROOT; };
+		CEACA4AE1C03488C007F4C18 /* FNAnalyser.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FNAnalyser.hpp; path = source/FNAnalyser.hpp; sourceTree = SOURCE_ROOT; };
+		CEACA4AF1C03488C007F4C18 /* FNCommon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FNCommon.cpp; path = source/FNCommon.cpp; sourceTree = SOURCE_ROOT; };
+		CEACA4B01C03488C007F4C18 /* FNCommon.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FNCommon.hpp; path = source/FNCommon.hpp; sourceTree = SOURCE_ROOT; };
+		CEACA4B11C03488C007F4C18 /* FNDataDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNDataDefine.h; path = source/FNDataDefine.h; sourceTree = SOURCE_ROOT; };
+		CEACA4B21C03488C007F4C18 /* FNDBSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FNDBSystem.cpp; path = source/FNDBSystem.cpp; sourceTree = SOURCE_ROOT; };
+		CEACA4B31C03488C007F4C18 /* FNDBSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FNDBSystem.h; path = source/FNDBSystem.h; sourceTree = SOURCE_ROOT; };
+		CEACA4B41C03488C007F4C18 /* FNStockData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FNStockData.cpp; path = source/FNStockData.cpp; sourceTree = SOURCE_ROOT; };
+		CEACA4B51C03488C007F4C18 /* FNStockData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FNStockData.hpp; path = source/FNStockData.hpp; sourceTree = SOURCE_ROOT; };
+		CEACA4B61C03488C007F4C18 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = source/main.cpp; sourceTree = SOURCE_ROOT; };
+		CEACA4BD1C034D45007F4C18 /* FNAnalyserOne.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FNAnalyserOne.cpp; sourceTree = "<group>"; };
+		CEACA4BE1C034D45007F4C18 /* FNAnalyserOne.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FNAnalyserOne.hpp; sourceTree = "<group>"; };
+		CEACA4C01C034DCF007F4C18 /* FNAnalyserFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FNAnalyserFactory.cpp; sourceTree = "<group>"; };
+		CEACA4C11C034DCF007F4C18 /* FNAnalyserFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FNAnalyserFactory.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,16 +77,21 @@
 		CE5544C81BD502690028F72D /* FNProject */ = {
 			isa = PBXGroup;
 			children = (
-				CE5544C91BD502690028F72D /* main.cpp */,
-				CE5544D01BD5032E0028F72D /* FNStockData.cpp */,
-				CE5544D11BD5032E0028F72D /* FNStockData.hpp */,
-				CE5544D31BD5035C0028F72D /* FNDataDefine.h */,
-				CEDFA1C41BD7822800CACB15 /* FNCommon.cpp */,
-				CEDFA1C51BD7822800CACB15 /* FNCommon.hpp */,
-				CEEFDF241BD8D31A00706E2D /* FNAnalyseMgr.cpp */,
-				CEEFDF251BD8D31A00706E2D /* FNAnalyseMgr.hpp */,
-				CEEFDF271BD8D95400706E2D /* FNAnalyser.cpp */,
-				CEEFDF281BD8D95400706E2D /* FNAnalyser.hpp */,
+				CEACA4AB1C03488C007F4C18 /* FNAnalyseMgr.cpp */,
+				CEACA4AC1C03488C007F4C18 /* FNAnalyseMgr.hpp */,
+				CEACA4AE1C03488C007F4C18 /* FNAnalyser.hpp */,
+				CEACA4AF1C03488C007F4C18 /* FNCommon.cpp */,
+				CEACA4B01C03488C007F4C18 /* FNCommon.hpp */,
+				CEACA4B11C03488C007F4C18 /* FNDataDefine.h */,
+				CEACA4B21C03488C007F4C18 /* FNDBSystem.cpp */,
+				CEACA4B31C03488C007F4C18 /* FNDBSystem.h */,
+				CEACA4B41C03488C007F4C18 /* FNStockData.cpp */,
+				CEACA4B51C03488C007F4C18 /* FNStockData.hpp */,
+				CEACA4B61C03488C007F4C18 /* main.cpp */,
+				CEACA4BD1C034D45007F4C18 /* FNAnalyserOne.cpp */,
+				CEACA4BE1C034D45007F4C18 /* FNAnalyserOne.hpp */,
+				CEACA4C01C034DCF007F4C18 /* FNAnalyserFactory.cpp */,
+				CEACA4C11C034DCF007F4C18 /* FNAnalyserFactory.hpp */,
 			);
 			path = FNProject;
 			sourceTree = "<group>";
@@ -140,11 +152,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEEFDF261BD8D31A00706E2D /* FNAnalyseMgr.cpp in Sources */,
-				CEDFA1C61BD7822800CACB15 /* FNCommon.cpp in Sources */,
-				CEEFDF291BD8D95400706E2D /* FNAnalyser.cpp in Sources */,
-				CE5544CA1BD502690028F72D /* main.cpp in Sources */,
-				CE5544D21BD5032E0028F72D /* FNStockData.cpp in Sources */,
+				CEACA4B91C03488C007F4C18 /* FNCommon.cpp in Sources */,
+				CEACA4BC1C03488C007F4C18 /* main.cpp in Sources */,
+				CEACA4BB1C03488C007F4C18 /* FNStockData.cpp in Sources */,
+				CEACA4C21C034DCF007F4C18 /* FNAnalyserFactory.cpp in Sources */,
+				CEACA4BA1C03488C007F4C18 /* FNDBSystem.cpp in Sources */,
+				CEACA4B71C03488C007F4C18 /* FNAnalyseMgr.cpp in Sources */,
+				CEACA4BF1C034D45007F4C18 /* FNAnalyserOne.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,7 +246,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libstdc++";
 				LIBRARY_SEARCH_PATHS = /Users/user/Documents/FNProject/core/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = /Users/user/Documents/FNProject/core/include;
@@ -243,7 +258,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libstdc++";
 				LIBRARY_SEARCH_PATHS = /Users/user/Documents/FNProject/core/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = /Users/user/Documents/FNProject/core/include;

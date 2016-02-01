@@ -12,7 +12,7 @@
 #include "easysqlite3/SqlCommon.h"
 
 #ifdef WIN32
-#include "dirent.h"
+#include "win/dirent.h"
 #else
 #include <dirent.h>
 #endif
